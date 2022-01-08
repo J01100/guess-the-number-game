@@ -23,6 +23,11 @@ document.querySelector(".check").addEventListener("click", () => {
     changeMessage("🎊 Correct Number!");
     document.querySelector(".number").textContent = randomNumber;
     document.querySelector("body").style.backgroundColor = "#60b437";
+
+    if (score > highscore) {
+      highscore = score;
+      document.querySelector(".highscore").textContent = score;
+    }
   } else if (guess != randomNumber) {
     changeMessage(guess > randomNumber ? "Too high" : "Too low");
     changeScore(--score);
@@ -31,3 +36,13 @@ document.querySelector(".check").addEventListener("click", () => {
     }
   }
 });
+
+document.querySelector(".again").addEventListener("click", () => {
+  document.querySelector("body").style.backgroundColor = "var(--bs-gray-900)";
+  document.querySelector(".number").textContent = "?";
+  score = 20;
+  document.querySelector(".score").textContent = score;
+  randomNumber = rng();
+});
+
+// to add bind enter to check guess,
