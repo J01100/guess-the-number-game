@@ -1,44 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
     <title>Guessing Game</title>
-    <link rel="icon" type="image/png" sizes="981x718" href="assets/img/Number_42_Blue.png">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/Minecraft.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="981x718"
+      href="assets/img/Number_42_Blue.png"
+    />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/Minecraft.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
 
-<body style="background: var(--bs-gray-900);color: var(--bs-white);font-family: Minecraft;margin: 28px;">
+  <body
+    style="
+      background: var(--bs-gray-900);
+      color: var(--bs-white);
+      font-family: Minecraft;
+      margin: 28px;
+    "
+  >
     <section>
-        <div style="text-align: center;margin: 20px;"><strong style="font-size: 40px;">Guess the number!</strong>
+      <div style="text-align: center; margin: 20px">
+        <strong style="font-size: 40px">Guess the number!</strong>
+        <div>
+          <hr style="height: 8px; color: var(--bs-body-bg)" />
+          <div class="d-xl-flex justify-content-xl-center">
             <div>
-                <hr style="height: 8px;color: var(--bs-body-bg);">
-                <div class="d-xl-flex justify-content-xl-center">
-                    <div>
-                        <div class="row">
-                            <div class="col">
-                                <p style="margin: 30px;font-size: 24px;">🥇 High Score:<span style="margin: 8px;font-weight: bold;">42</span></p>
-                                <p style="font-size: 24px;text-decoration:  underline;">💯&nbsp;Score:<span style="margin: 8px;font-weight: bold;">42</span></p>
-                            </div>
-                            <div class="col">
-                                <p style="color: #000000;font-size: 48px;text-align: center;background: var(--bs-body-bg);border-radius: 16px;font-weight: bold;padding: 24px;">?</p>
-                            </div>
-                        </div>
-                    </div>
+              <div class="row">
+                <div class="col">
+                  <!-- class highscore-->
+                  <p style="margin: 30px; font-size: 24px">
+                    HighScore:<span
+                      class="highscore"
+                      style="margin: 8px; font-weight: bold"
+                      >42</span
+                    >
+                  </p>
+                  <!-- class score-->
+                  <p style="font-size: 24px; text-decoration: underline">
+                    Score:<span
+                      class="score"
+                      style="margin: 8px; font-weight: bold"
+                      >20</span
+                    >
+                  </p>
                 </div>
+                <div class="col">
+                  <!-- class number = guess the number box-->
+                  <p
+                    class="number"
+                    style="
+                      color: #000000;
+                      font-size: 48px;
+                      text-align: center;
+                      background: var(--bs-body-bg);
+                      border-radius: 16px;
+                      font-weight: bold;
+                      padding: 24px;
+                    "
+                  >
+                    ?
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
     <section>
-        <div style="margin: 36px;text-align: center;">
-            <p style="text-align: center;font-size: 29px;font-weight: bold;font-style: italic;">START GUESSING...</p><input type="number" style="font-size: 36px;width: 128px;border-width: 6px;border-style: solid;border-radius: 6px;"><button class="btn btn-primary" type="button" style="margin: 12px;background: var(--bs-gray);">CHECK</button>
-        </div>
+      <div style="margin: 36px; text-align: center">
+        <!-- class message-->
+        <p
+          class="message"
+          style="
+            text-align: center;
+            font-size: 29px;
+            font-weight: bold;
+            font-style: italic;
+          "
+        >
+          START GUESSING...
+        </p>
+        <!-- class guess-->
+        <input
+          class="guess"
+          type="number"
+          style="
+            font-size: 36px;
+            width: 128px;
+            border-width: 6px;
+            border-style: solid;
+            border-radius: 6px;
+          "
+        /><button
+          class="btn btn-secondary check"
+          type="button"
+          style="margin: 12px; background: var(--bs-gray)"
+        >
+          CHECK
+        </button>
+      </div>
     </section>
-    <div class="d-lg-flex justify-content-lg-center align-items-lg-center"><button class="btn btn-primary" type="button" style="font-size: 28px;color: var(--bs-dark);background: var(--bs-body-bg);margin: 28px;margin-top: 0px;">AGAIN!</button></div>
+    <center>
+      <div class="d-lg-flex justify-content-lg-center align-items-lg-center">
+        <button
+          class="btn btn-primary"
+          type="button"
+          style="
+            font-size: 28px;
+            color: var(--bs-dark);
+            background: var(--bs-body-bg);
+            margin: 28px;
+            margin-top: 0px;
+          "
+        >
+          AGAIN!
+        </button>
+      </div>
+    </center>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
