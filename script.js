@@ -6,7 +6,6 @@ let score = 20;
 let highscore = 0;
 let gameOver = false;
 let messageEl = document.querySelector(".message");
-let numberEl = document.querySelector(".number").textContent;
 
 const changeMessage = (message) => {
   messageEl.textContent = message;
@@ -23,7 +22,7 @@ const processGame = () => {
     changeMessage("Invalid input.");
   } else if (guess == randomNumber) {
     changeMessage("🎊 Correct Number!");
-    numberEl = randomNumber;
+    document.querySelector(".number").textContent = randomNumber;
     document.querySelector("body").style.backgroundColor = "#60b437";
     document.querySelector(".check").classList.toggle("disabled");
     gameOver = true;
@@ -51,7 +50,7 @@ document.addEventListener("keydown", (e) => {
 // on reset button click
 document.querySelector(".again").addEventListener("click", () => {
   document.querySelector("body").style.backgroundColor = "var(--bs-gray-900)";
-  numberEl = "?";
+  document.querySelector(".number").textContent = "?";
   changeMessage("START GUESSING!");
   score = 20;
   changeScore(score);
