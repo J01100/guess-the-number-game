@@ -37,6 +37,7 @@ const processGame = () => {
       changeMessage("YOU LOST THE GAME!");
       document.querySelector(".check").classList.toggle("disabled");
       gameOver = true;
+      document.querySelector(".number").textContent = randomNumber;
     }
   }
 };
