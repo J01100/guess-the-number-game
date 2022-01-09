@@ -25,7 +25,7 @@ const processGame = () => {
     changeMessage("🎊 Correct Number!");
     numberEl = randomNumber;
     document.querySelector("body").style.backgroundColor = "#60b437";
-    document.querySelector(".check").classList.add("disabled");
+    document.querySelector(".check").classList.toggle("disabled");
     gameOver = true;
     if (score > highscore) {
       highscore = score;
@@ -36,7 +36,7 @@ const processGame = () => {
     changeScore(--score);
     if (score < 1) {
       changeMessage("YOU LOST THE GAME!");
-      document.querySelector(".check").classList.add("disabled");
+      document.querySelector(".check").classList.toggle("disabled");
       gameOver = true;
     }
   }
@@ -56,6 +56,6 @@ document.querySelector(".again").addEventListener("click", () => {
   score = 20;
   changeScore(score);
   randomNumber = rng();
-  document.querySelector(".check").classList.remove("disabled");
+  document.querySelector(".check").classList.toggle("disabled");
   gameOver = false;
 });
